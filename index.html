@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluxograma - Pagamento e Execução de Serviço</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="header-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="7.5 4.21 12 6.81 16.5 4.21"></polyline>
+                        <polyline points="7.5 19.79 7.5 14.6 3 12"></polyline>
+                        <polyline points="21 12 16.5 14.6 16.5 19.79"></polyline>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                    </svg>
+                </div>
+                <div class="header-text">
+                    <div class="header-badge">PROCESSO INTEGRADO</div>
+                    <h1>Fluxo de Pagamento e Execução de Serviço</h1>
+                    <p class="header-subtitle">Sistema de Manutenção Hoteleira • Versão 2.0</p>
+                </div>
+            </div>
+            <div class="header-meta">
+                <div class="meta-card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                    <span>7 Etapas</span>
+                </div>
+                <div class="meta-card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <span>4 Departamentos</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Legenda -->
+        <div class="legend-container">
+            <div class="legend-title">Responsáveis:</div>
+            <div class="legend-items">
+                <div class="legend-badge manutencao">
+                    <span class="badge-dot"></span>
+                    <span>Responsável do Setor</span>
+                </div>
+                <div class="legend-badge controller">
+                    <span class="badge-dot"></span>
+                    <span>Controller</span>
+                </div>
+                <div class="legend-badge financeiro">
+                    <span class="badge-dot"></span>
+                    <span>Financeiro</span>
+                </div>
+                <div class="legend-badge prestador">
+                    <span class="badge-dot"></span>
+                    <span>Prestador</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controles de Visualização -->
+        <div class="view-controls">
+            <button class="view-btn active" data-view="vertical">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <polyline points="19 12 12 19 5 12"></polyline>
+                </svg>
+                Vertical
+            </button>
+            <button class="view-btn" data-view="horizontal">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+                Horizontal
+            </button>
+            <button class="zoom-btn" data-action="zoom-in">+</button>
+            <button class="zoom-btn" data-action="zoom-out">−</button>
+            <button class="zoom-btn" data-action="zoom-reset">⟲</button>
+        </div>
+
+        <!-- Fluxograma -->
+        <div class="flowchart-wrapper">
+            <div class="flowchart-canvas" id="flowchart-canvas">
+                <svg class="connections-layer" id="connections-svg"></svg>
+                <div class="nodes-layer" id="nodes-layer"></div>
+            </div>
+        </div>
+
+        <!-- Painel de Detalhes -->
+        <div class="details-panel" id="details-panel">
+            <div class="details-header">
+                <h3>Detalhes da Etapa</h3>
+                <button class="close-btn" id="close-details">×</button>
+            </div>
+            <div class="details-content" id="details-content">
+                <p class="details-placeholder">Clique em uma etapa para ver os detalhes</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
