@@ -92,7 +92,7 @@ const flowData = [
         ]
     },
     {
-        id: 6,
+        id: 7,
         title: "Pagamento Final",
         responsible: "Financeiro",
         type: "financeiro",
@@ -109,7 +109,7 @@ const flowData = [
         ]
     },
     {
-        id: 7,
+        id: 8,
         title: "Arquivamento e Registro",
         responsible: "Todos os Setores",
         type: "todos",
